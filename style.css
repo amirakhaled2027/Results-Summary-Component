@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --clr-reaction-red: hsl(0, 100%, 67%);
+    --clr-memory-yellow:  hsl(39, 100%, 56%);
+    --clr-verbal-green: hsl(166, 100%, 37%);
+    --clr-visual-blue: hsl(234, 85%, 45%);
+
+    --clr-memory-yellow-opacity:  hsla(39, 100%, 56%, 0.1);
+    --clr-visual-blue-opacity: hsla(234, 85%, 45%, 0.1);
+    --clr-reaction-red-opacity: hsla(0, 100%, 67%, 0.1);
+    --clr-verbal-green-opacity: hsla(166, 75%, 42%, 0.1);
+
+
+
+
+
+    --bg-clr-gradient1: hsl(252, 100%, 67%);
+    --bg-clr-gradient2: hsl(241, 81%, 54%);
+
+    --clr-circle-gradient1:  hsla(256, 72%, 46%, 1);
+    --clr-circle-gradient2: hsla(241, 72%, 46%, 0);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-pale-blue: hsl(221, 100%, 96%);
+    --clr-neutral-light-lavender: hsl(241, 100%, 89%);
+    --clr-neutral-dark-grey-blue: hsl(224, 30%, 27%);
+
+
+    --ff-primary: 'Hanken Grotesk', sans-serif;;
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    --fs-paragraph: 18px;
+}
+
+/* Desktop */
+@media screen and (max-width: 1440px) {
+
+
+}
+/* Mobile */
+@media screen and (max-width: 375px) {
+
+    .purple-card {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+
+    body {
+        background-color: green;
+    }
+
+    /* div .purple-card {
+        flex-direction: column;
+        color: red;
+    } */
+
+    body .container {
+        flex-direction: column;
+    }
+
+    body div .summary-card { 
+        background-color: tomato;
+        width: 300px;
+        height: 430px;
+        font-family: var(--ff-primary);
+        flex-direction: column;
+        box-shadow: red;
+    }
+}
+
+
+
+
+
+
+h1 {
+    font-size: inherit;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15dvh;
+    margin-top: 15vh;
+
+}
+
+.purple-card {
+    background: linear-gradient(to bottom, var(--bg-clr-gradient1), var(--bg-clr-gradient2));
+    color: white;
+    width: 300px;
+    height: 430px;
+    font-family: var(--ff-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+
+.purprle-card-header h1 {
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--clr-neutral-light-lavender);
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.purprle-card-circle {
+    background: linear-gradient(180deg, var(--clr-circle-gradient1), var(--clr-circle-gradient2));
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+
+.purprle-card-circle h1,
+.purprle-card-circle p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.purprle-card-circle h1 {
+    font-size: 55px;
+    font-weight: 800;
+    margin-top: 20px;
+
+}
+
+.purprle-card-circle p {
+    font-size: 15px;
+    font-weight: lighter;
+    opacity: 0.65;
+}
+
+.purple-card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.purple-card-footer h1 {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size: 30px;
+}
+
+.purple-card-footer p {
+    text-align: center;
+    width: 230px;
+    font-size: 15px;
+    font-weight: 100;
+    color: var(--clr-neutral-light-lavender);
+    line-height: 25px;
+}
+
+
+/* Summary Card */
+
+
+.summary-card { 
+    background-color: #ffffff;
+    width: 350px;
+    height: 430px;
+    font-family: var(--ff-primary);
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 10px hsl(221, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: -20px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.summary h1 {
+    font-size: 22px;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-800);
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.final-score h1 {
+    color: var(--clr-neutral-dark-grey-blue);
+    opacity: 0.55;
+}
+
+.reaction {
+    background-color: var(--clr-reaction-red-opacity);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.reaction-left {
+    display: flex;
+}
+
+.reaction-right {
+    display: flex;
+    gap: 6px;
+}
+
+.reaction p {
+color: var(--clr-reaction-red);
+    /* color: var(--clr-reaction-red); */
+}
+
+/*  */
+.memory {
+    background-color: var(--clr-memory-yellow-opacity);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.memory-left {
+    display: flex;
+}
+
+.memory-right {
+    display: flex;
+    gap: 6px;
+}
+
+.memory p {
+    color: var(--clr-memory-yellow);
+}
+
+
+/* There was a problem in var so I used the hsla directly */
+.verbal {
+    background-color: hsla(166, 75%, 42%, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.verbal-left {
+    display: flex;
+}
+
+.verbal-right {
+    display: flex;
+    gap: 6px;
+
+
+}
+
+.verbal p {
+    color: var(--clr-verbal-green);
+}
+
+
+
+/* There was a problem in var so I used the hsla directly */
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.visual-left {
+    display: flex;
+}
+
+.visual-right {
+    display: flex;
+    gap: 6px;
+
+}
+
+.visual p {
+    color: var(--clr-visual-blue);
+}
+
+.button  button{
+    background-color: #2a324f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 45px;
+    border-radius: 40px;
+    padding-left: 70px;
+    font-weight: var(--fw-500);
+    font-family: var(--ff-primary);
+    font-size: 15px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+    
